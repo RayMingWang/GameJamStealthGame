@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a07f9ce1-b59e-4f4d-886e-0292f8d44834" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.DarkCity/.idea/contentModel.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.DarkCity/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.DarkCity/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.DarkCity/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.DarkCity/riderModule.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DarkCity/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DarkCity/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Lightning.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Lightning.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SceneLighting.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SceneLighting.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdPartyAsset/KajamansRoads/Free/Obj.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,18 +45,94 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="-1741174410">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.13" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="cs" value="339" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="C#" value="339" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="cs" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="C#" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/SceneLighting.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+              <folding>
+                <marker date="1536424798517" expanded="false" signature="6:78" ph="..." />
+                <marker date="1536424798517" expanded="true" signature="122:422" ph="{...}" />
+                <marker date="1536424798517" expanded="true" signature="205:271" ph="{...}" />
+                <marker date="1536424798517" expanded="true" signature="334:420" ph="{...}" />
+                <marker date="1536424798517" expanded="true" signature="370:417" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Lightning.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="525">
+              <caret line="76" column="65" selection-start-line="76" selection-start-column="65" selection-end-line="76" selection-end-column="65" />
+              <folding>
+                <marker date="1536425175875" expanded="false" signature="6:78" ph="..." />
+                <marker date="1536425175875" expanded="true" signature="118:1689" ph="{...}" />
+                <marker date="1536425175875" expanded="true" signature="510:623" ph="{...}" />
+                <marker date="1536425175875" expanded="true" signature="686:1067" ph="{...}" />
+                <marker date="1536425175875" expanded="true" signature="713:958" ph="{...}" />
+                <marker date="1536425175875" expanded="true" signature="751:954" ph="{...}" />
+                <marker date="1536425175875" expanded="true" signature="965:1061" ph="{...}" />
+                <marker date="1536425175875" expanded="true" signature="1135:1541" ph="{...}" />
+                <marker date="1536425175875" expanded="true" signature="1220:1351" ph="{...}" />
+                <marker date="1536425175875" expanded="true" signature="1358:1538" ph="{...}" />
+                <marker date="1536425175875" expanded="true" signature="1400:1438" ph="{...}" />
+                <marker date="1536425175875" expanded="true" signature="1446:1534" ph="{...}" />
+                <marker date="1536425175875" expanded="true" signature="1569:1686" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Lightning.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SceneLighting.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/SceneLighting.cs" />
         <option value="$PROJECT_DIR$/Assets/Lightning.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SceneLighting.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Lightning.cs" />
       </list>
     </option>
   </component>
@@ -66,10 +142,11 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="1713" />
-    <option name="width" value="1734" />
-    <option name="height" value="1447" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="79" />
+    <option name="y" value="35" />
+    <option name="width" value="1361" />
+    <option name="height" value="709" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -77,6 +154,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="FileSystemExplorer" />
       <pane id="SolutionExplorer">
         <option name="show-all-files" value="false" />
       </pane>
@@ -92,7 +170,6 @@
         </subPane>
         <option name="show-hidden-items" value="false" />
       </pane>
-      <pane id="FileSystemExplorer" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -140,11 +217,12 @@
       <updated>1536413500318</updated>
       <workItem from="1536413514394" duration="199000" />
       <workItem from="1536413727412" duration="4007000" />
+      <workItem from="1536424671396" duration="655000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4206000" />
+    <option name="totallyTimeSpent" value="4861000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -156,9 +234,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1713" y="0" width="1734" height="1447" extended-state="0" />
+    <frame x="0" y="23" width="1280" height="709" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25268817" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24798061" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -203,17 +281,41 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Assets/SceneLighting.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/SceneLighting.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/Lightning.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/SceneLighting.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="16" column="38" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+        <state relative-caret-position="60">
+          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+          <folding>
+            <marker date="1536424798517" expanded="false" signature="6:78" ph="..." />
+            <marker date="1536424798517" expanded="true" signature="122:422" ph="{...}" />
+            <marker date="1536424798517" expanded="true" signature="205:271" ph="{...}" />
+            <marker date="1536424798517" expanded="true" signature="334:420" ph="{...}" />
+            <marker date="1536424798517" expanded="true" signature="370:417" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Lightning.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Lightning.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="48" column="35" selection-start-line="48" selection-start-column="35" selection-end-line="48" selection-end-column="35" />
+        <state relative-caret-position="525">
+          <caret line="76" column="65" selection-start-line="76" selection-start-column="65" selection-end-line="76" selection-end-column="65" />
+          <folding>
+            <marker date="1536425175875" expanded="false" signature="6:78" ph="..." />
+            <marker date="1536425175875" expanded="true" signature="118:1689" ph="{...}" />
+            <marker date="1536425175875" expanded="true" signature="510:623" ph="{...}" />
+            <marker date="1536425175875" expanded="true" signature="686:1067" ph="{...}" />
+            <marker date="1536425175875" expanded="true" signature="713:958" ph="{...}" />
+            <marker date="1536425175875" expanded="true" signature="751:954" ph="{...}" />
+            <marker date="1536425175875" expanded="true" signature="965:1061" ph="{...}" />
+            <marker date="1536425175875" expanded="true" signature="1135:1541" ph="{...}" />
+            <marker date="1536425175875" expanded="true" signature="1220:1351" ph="{...}" />
+            <marker date="1536425175875" expanded="true" signature="1358:1538" ph="{...}" />
+            <marker date="1536425175875" expanded="true" signature="1400:1438" ph="{...}" />
+            <marker date="1536425175875" expanded="true" signature="1446:1534" ph="{...}" />
+            <marker date="1536425175875" expanded="true" signature="1569:1686" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>

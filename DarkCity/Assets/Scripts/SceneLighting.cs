@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SceneLighting : MonoBehaviour
 {
+	
+
 	private Light _light;
 	// Use this for initialization
 	private void Start ()

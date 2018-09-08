@@ -6,10 +6,15 @@ public class Lightning : MonoBehaviour
 {
 
 	public AnimationCurve[] lightningSequence;
+	public AudioClip thunderSoundEffect;
+	public float thunderVolume = 1.5f;
+	public float thunderDelay=0.9f;
+	
 	
 	private Light _light;
 	private bool _playingLightning = false;
 	private float _lightningTime = 0f;
+	private AudioSource _audioSource;
 
 	private AnimationCurve _selectedSequence;
 	// Use this for initialization
@@ -17,6 +22,8 @@ public class Lightning : MonoBehaviour
 	{
 		_light = GetComponent<Light>();
 		_light.enabled = false;
+
+		_audioSource = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -47,6 +54,7 @@ public class Lightning : MonoBehaviour
 		{
 			_playingLightning = false;
 			_light.enabled = false;
+			StartCoroutine("PlayThunder");
 			Debug.Log("Lightning end!");
 		}
 		else
@@ -61,6 +69,12 @@ public class Lightning : MonoBehaviour
 				_light.intensity = sequence.Evaluate(offsets);
 			}
 		}
+	}
+
+	IEnumerator PlayThunder()
+	{
+		yield return new WaitForSeconds(thunderDelay);
+		_audioSource.PlayOneShot(thunderSoundEffect,thunderVolume);
 	}
 
 }
