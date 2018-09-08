@@ -19,14 +19,14 @@ public class PlayerControler : MonoBehaviour
 	void Update ()
     {
         
-        
+        UpdateCam();
         
 	    if(Input.GetMouseButton(0))//Left mouse clicked?
         {
             Ray ray = cam.ScreenPointToRay(Input.mousePosition);//take current mouse position and create ray in that direction
             RaycastHit hit;
 
-            if(Physics.Raycast(ray, out hit,5000f,terrainLayer)/*store ray information in hit*/)//if ray hits something move agent
+            if(Physics.Raycast(ray, out hit,Mathf.Infinity,terrainLayer)/*store ray information in hit*/)//if ray hits something move agent
             {
                 agent.SetDestination(hit.point);
             }
@@ -35,16 +35,16 @@ public class PlayerControler : MonoBehaviour
     
     
     private void OnTriggerEnter(Collider other) {
-        Debug.Log("ttt");
+      
         if (other.tag=="XGuide")
         {
-            Debug.Log("xxx");
+          
             camState = 1;
         }
 
         if (other.tag=="ZGuide")
         {
-            Debug.Log("zzz");
+            
             camState = 2;
         }
     }
@@ -66,23 +66,49 @@ public class PlayerControler : MonoBehaviour
     private void UpdateCam()
     {
         Vector3 camNewPosition;
-        Vector3 camNEwRotation;
+        Vector3 camNewRotation;
         switch (camState)
         {
                 
             case 1:
-                camNewPosition = transform.position + Vector3.up * 56;
+                if (transform.rotation.eulerAngles.y>0&&transform.rotation.eulerAngles.y<180)
+                {
+                    camNewPosition = transform.position+ Vector3.up * 56 - Vector3.right * 20;
+                    camNewRotation = new Vector3(125,-90,-90);
+                    
+                }
+                else
+                {
+                    camNewPosition = transform.position+ Vector3.up * 56 + Vector3.right * 25;
+                    camNewRotation = new Vector3(125,90,90);
+                }
+
                 break;
             case 2:
-                camNewPosition = transform.position + Vector3.up * 56;
+                
+                if (transform.rotation.eulerAngles.y>90&&transform.rotation.eulerAngles.y<270)
+                {
+                    camNewPosition = transform.position + Vector3.up * 56 + Vector3.forward * 25;
+                    camNewRotation = new Vector3(125,0,0);
+                }
+                else
+                {
+                    camNewPosition = transform.position+ Vector3.up * 56 - Vector3.forward * 14;
+                    camNewRotation = new Vector3(65,0,0);
+                }
                 break;
+                
             case 0:
             default:
                 camNewPosition = transform.position + Vector3.up * 56;
+                camNewRotation = new Vector3(90,0,0);
                 break;
            
         }
         
-        cam.transform.position = Vector3.Lerp(cam.transform.position, camNewPosition, camPositionLerpSpeed);
+        cam.transform.position = Vector3.Lerp(cam.transform.position, camNewPosition,
+            camPositionLerpSpeed*Time.deltaTime);
+        cam.transform.rotation = Quaternion.Lerp(cam.transform.rotation, Quaternion.Euler( camNewRotation), 
+            camRotationLerpSpeed*Time.deltaTime);
     }
 }

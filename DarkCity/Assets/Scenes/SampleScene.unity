@@ -924,13 +924,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 810042734}
-  m_LocalRotation: {x: 0.117207766, y: -0.000086945256, z: 0.00073669216, w: 0.99310714}
+  m_LocalRotation: {x: 0.0016200583, y: -0.0000012017105, z: 0.00074180536, w: 0.9999984}
   m_LocalPosition: {x: 0, y: -0.52, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1720359452}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 13.462001, y: 0, z: 0.085}
+  m_LocalEulerAnglesHint: {x: 0.186, y: 0, z: 0.085}
 --- !u!108 &810042736
 Light:
   m_ObjectHideFlags: 0
@@ -942,7 +942,7 @@ Light:
   m_Type: 0
   m_Color: {r: 1, g: 0.9481132, b: 0.9481132, a: 1}
   m_Intensity: 3.9
-  m_Range: 5.44
+  m_Range: 17.01
   m_SpotAngle: 29.187567
   m_CookieSize: 10
   m_Shadows:
@@ -1491,8 +1491,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 534669904}
-  camPositionLerpSpeed: 0.8
-  camRotationLerpSpeed: 0.8
+  camPositionLerpSpeed: 2
+  camRotationLerpSpeed: 8
   terrainLayer:
     serializedVersion: 2
     m_Bits: 512
