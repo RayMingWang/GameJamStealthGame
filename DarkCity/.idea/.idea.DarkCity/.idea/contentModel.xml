@@ -5,6 +5,25 @@
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="EnemyControler.cs" t="Include" />
+        <e p="LightCollider.cs" t="Include" />
+        <e p="NavMeshComponents" t="Include">
+          <e p="Editor" t="Include">
+            <e p="CreateCone.cs" t="Include" />
+            <e p="NavMeshComponentsGUIUtility.cs" t="Include" />
+            <e p="NavMeshLinkEditor.cs" t="Include" />
+            <e p="NavMeshModifierEditor.cs" t="Include" />
+            <e p="NavMeshModifierVolumeEditor.cs" t="Include" />
+            <e p="NavMeshSurfaceEditor.cs" t="Include" />
+          </e>
+          <e p="Scripts" t="Include">
+            <e p="NavMeshLink.cs" t="Include" />
+            <e p="NavMeshModifier.cs" t="Include" />
+            <e p="NavMeshModifierVolume.cs" t="Include" />
+            <e p="NavMeshSurface.cs" t="Include" />
+          </e>
+        </e>
+        <e p="PlayerControler.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="Lightning.cs" t="Include" />
           <e p="SceneLighting.cs" t="Include" />
