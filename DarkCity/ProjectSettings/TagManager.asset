@@ -6,6 +6,8 @@ TagManager:
   tags:
   - XGuide
   - ZGuide
+  - ClickerTag
+  - wall
   layers:
   - Default
   - TransparentFX

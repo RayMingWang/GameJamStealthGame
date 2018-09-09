@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class Lightning : MonoBehaviour
 {
-
+	[Header("Thunder Setting")]
 	public AnimationCurve[] lightningSequence;
 	public AudioClip thunderSoundEffect;
 	public float thunderVolume = 1.5f;
 	public float thunderDelay=0.9f;
-	
+
+	[Header("Lightning Setting")]
+	public float lightningTensity = 1f;
 	
 	private Light _light;
 	private bool _playingLightning = false;
@@ -66,7 +68,7 @@ public class Lightning : MonoBehaviour
 			else
 			{
 				_light.enabled = true;
-				_light.intensity = sequence.Evaluate(offsets);
+				_light.intensity = lightningTensity*sequence.Evaluate(offsets);
 			}
 		}
 	}

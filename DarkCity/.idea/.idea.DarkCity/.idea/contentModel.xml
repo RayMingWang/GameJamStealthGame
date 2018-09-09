@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="$PROJECT_DIR$" t="IncludeRecursive">
+    <e p="C:\Users\Rimen\.Rider2018.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Rimen\.Rider2018.2\system\resharper-host\local\Transient\ReSharperHost\v182\SolutionCaches\_DarkCity.-1982302611.00" t="ExcludeRecursive" />
+    <e p="G:\DarkCity" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="ClickerScript.cs" t="Include" />
         <e p="EnemyControler.cs" t="Include" />
         <e p="LightCollider.cs" t="Include" />
         <e p="NavMeshComponents" t="Include">
@@ -356,6 +359,7 @@
             <e p="Readme.txt" t="Include" />
           </e>
         </e>
+        <e p="WalkMark.cs" t="Include" />
       </e>
       <e p="DarkCity.sln" t="IncludeFlat" />
       <e p="Library" t="ExcludeRecursive" />
@@ -365,7 +369,5 @@
         <e p="bin" t="ExcludeRecursive" />
       </e>
     </e>
-    <e p="$USER_HOME$/Library/Caches/Rider2018.2/extResources" t="IncludeRecursive" />
-    <e p="$USER_HOME$/Library/Caches/Rider2018.2/resharper-host/local/Transient/ReSharperHost/v182/SolutionCaches/_DarkCity.-1217881415.00" t="ExcludeRecursive" />
   </component>
 </project>

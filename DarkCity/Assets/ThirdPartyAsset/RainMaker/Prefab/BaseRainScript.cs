@@ -323,7 +323,7 @@ namespace DigitalRuby.RainMaker
             AudioSource.playOnAwake = false;
             AudioSource.volume = 0.0f;
             AudioSource.Stop();
-            TargetVolume = 1.0f;
+            TargetVolume = 1f;
         }
 
         public void Play(float targetVolume)
@@ -333,7 +333,7 @@ namespace DigitalRuby.RainMaker
                 AudioSource.volume = 0.0f;
                 AudioSource.Play();
             }
-            TargetVolume = targetVolume;
+            TargetVolume = 0.2f;
         }
 
         public void Stop()
@@ -343,9 +343,12 @@ namespace DigitalRuby.RainMaker
 
         public void Update()
         {
-            if (AudioSource.isPlaying && (AudioSource.volume = Mathf.Lerp(AudioSource.volume, TargetVolume, Time.deltaTime)) == 0.0f)
+            if (AudioSource.isPlaying && (AudioSource.volume =  Mathf.Lerp(AudioSource.volume, TargetVolume, Time.deltaTime)) == 0.0f)
             {
+              
                 AudioSource.Stop();
+                
+                
             }
         }
     }

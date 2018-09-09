@@ -12,6 +12,8 @@ public class SceneLighting : MonoBehaviour
 	{
 		_light = GetComponent<Light>();
 		_light.enabled = false;
+		
+		
 	}
 	
 	// Update is called once per frame
