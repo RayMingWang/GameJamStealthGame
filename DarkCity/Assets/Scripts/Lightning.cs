@@ -15,6 +15,7 @@ public class Lightning : MonoBehaviour
 	
 	private Light _light;
 	private bool _playingLightning = false;
+    private bool _prepareLightning = false;
 	private float _lightningTime = 0f;
 	private AudioSource _audioSource;
 
@@ -30,18 +31,15 @@ public class Lightning : MonoBehaviour
 	
 	// Update is called once per frame
 	private void Update () {
-		if (!_playingLightning)
+		if (!_prepareLightning)
 		{
-			if (Input.GetKeyDown("space"))
-			{
-				_selectedSequence = lightningSequence[Random.Range(0, lightningSequence.Length)];
-				_lightningTime = 0;
-				_playingLightning = true;
-				SetLightning(_lightningTime,_selectedSequence);
-
-			}
+            _prepareLightning = true;
+            StartCoroutine("RandomThunder");
+            
+           
+           
 		}
-		else
+		if(_playingLightning)
 		{
 			_lightningTime += Time.deltaTime;
 			SetLightning(_lightningTime,_selectedSequence);
@@ -57,7 +55,8 @@ public class Lightning : MonoBehaviour
 			_playingLightning = false;
 			_light.enabled = false;
 			StartCoroutine("PlayThunder");
-			Debug.Log("Lightning end!");
+            _prepareLightning = false;
+            Debug.Log("Lightning end!");
 		}
 		else
 		{
@@ -78,5 +77,15 @@ public class Lightning : MonoBehaviour
 		yield return new WaitForSeconds(thunderDelay);
 		_audioSource.PlayOneShot(thunderSoundEffect,thunderVolume);
 	}
+
+    IEnumerator RandomThunder()
+    {
+          yield return new WaitForSeconds(Random.Range(0,5f));
+
+        _playingLightning = true;
+        _selectedSequence = lightningSequence[Random.Range(0, lightningSequence.Length)];
+        _lightningTime = 0;
+        SetLightning(_lightningTime, _selectedSequence);
+    }
 
 }

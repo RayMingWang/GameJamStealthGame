@@ -49,6 +49,6 @@ public class EnemyControler : MonoBehaviour {
 
     bool V3Equals(Vector3 a, Vector3 b)
     {
-        return Vector3.SqrMagnitude(a - b) <= 0.001;
+        return Vector3.SqrMagnitude(a - b) <= 50;
     }
 }

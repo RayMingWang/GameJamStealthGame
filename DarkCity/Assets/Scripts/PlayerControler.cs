@@ -13,12 +13,16 @@ public class PlayerControler : MonoBehaviour
     public float camRotationLerpSpeed=0.8f;
     public LayerMask terrainLayer;
     public NavMeshAgent agent;
+    public float camHeight = 56f;
+
     [SerializeField]
     private int camState = 0;
 
+    Animator anim;
+
     [Header("Lightning")] public Light flashLight;
     public bool flashLightOn = false;
-    public float flashLightOnTime = 2f;
+    public float flashLightOnTime = 10f;
 
 
 
@@ -32,17 +36,22 @@ public class PlayerControler : MonoBehaviour
     public GameObject Clicker;
     State state = State.ClickerDestroyed;
 
-    float timer = 10f;
+    float timer = 0.5f;
 
-
-
-
+    private void Awake()
+    {
+        anim = GetComponent<Animator>();
+    }
 
     // Update is called once per frame
     void Update ()
     {
         
         UpdateCam();
+
+        //Debug.Log(GetComponent<Rigidbody>().velocity.magnitude);
+        
+
         UpdateFlashLight();
         if (Input.GetKeyDown(KeyCode.S))
         {
@@ -56,13 +65,15 @@ public class PlayerControler : MonoBehaviour
             {
                 DestroyClickerState();
                 Destroy(spawnedClicker);
-
+                //anim.SetFloat("Forward", Input.GetAxisRaw("Vertical"));
             }
         }
         if (V3Equals(Clicker.transform.position, agent.transform.position))
         {
             state = State.ClickerDestroyed;
-            agent.speed = 8f;
+            //agent.speed = 8f;
+            agent.speed = 0.1f;
+            anim.SetFloat("Forward", Input.GetAxisRaw("Vertical"));
             speed = Speed.walking;
 
         }
@@ -77,9 +88,10 @@ public class PlayerControler : MonoBehaviour
                 {
                     if (hit.collider.tag == "ClickerTag")
                     {
-                        agent.speed = 20f;
+                        //agent.speed = 20f;
+                        agent.speed = 2f;
                         speed = Speed.running;
-                        timer = 2f;
+                        timer = 0.5f;
                         hit.transform.GetComponent<WalkMark>().SwitchMark();
                         //
                         //
@@ -97,7 +109,7 @@ public class PlayerControler : MonoBehaviour
                         {
 
                             state = State.ClickerCreated;
-
+                            anim.SetFloat("Forward", GetComponent<Rigidbody>().velocity.magnitude);
                             Clicker.transform.position = hit.point;
                             spawnedClicker = Instantiate(Clicker);
                             spawnedClicker.AddComponent<ClickerScript>();
@@ -108,7 +120,7 @@ public class PlayerControler : MonoBehaviour
                         {
                             DestroyClickerState();
                             Destroy(spawnedClicker);
-
+                            anim.SetFloat("Forward", GetComponent<Rigidbody>().velocity.magnitude);
                             state = State.ClickerCreated;
 
                             Clicker.transform.position = hit.point;
@@ -125,9 +137,10 @@ public class PlayerControler : MonoBehaviour
     void DestroyClickerState()
     {
         state = State.ClickerDestroyed;
-        agent.speed = 8f;
+        //agent.speed = 8f;
+        agent.speed = 0.1f;
         speed = Speed.walking;
-        timer = 10f;
+        timer = 0.5f;
     }
 
     bool V3Equals(Vector3 a, Vector3 b)
@@ -173,13 +186,13 @@ public class PlayerControler : MonoBehaviour
             case 1:
                 if (transform.rotation.eulerAngles.y>0&&transform.rotation.eulerAngles.y<180)
                 {
-                    camNewPosition = transform.position+ Vector3.up * 56 - Vector3.right * 20;
+                    camNewPosition = transform.position+ Vector3.up * camHeight - Vector3.right * 20;
                     camNewRotation = new Vector3(125,-90,-180);
 
                 }
                 else
                 {
-                    camNewPosition = transform.position+ Vector3.up * 56 + Vector3.right * 25;
+                    camNewPosition = transform.position+ Vector3.up * camHeight + Vector3.right * 25;
                     camNewRotation = new Vector3(45,-90,0);
                 }
 
@@ -188,19 +201,19 @@ public class PlayerControler : MonoBehaviour
                 
                 if (transform.rotation.eulerAngles.y>90&&transform.rotation.eulerAngles.y<270)
                 {
-                    camNewPosition = transform.position + Vector3.up * 56 + Vector3.forward * 25;
+                    camNewPosition = transform.position + Vector3.up * camHeight + Vector3.forward * 25;
                     camNewRotation = new Vector3(125,0,180);
                 }
                 else
                 {
-                    camNewPosition = transform.position+ Vector3.up * 56 - Vector3.forward * 14;
+                    camNewPosition = transform.position+ Vector3.up * camHeight - Vector3.forward * 14;
                     camNewRotation = new Vector3(65,0,0);
                 }
                 break;
                 
             case 0:
             default:
-                camNewPosition = transform.position + Vector3.up * 56;
+                camNewPosition = transform.position + Vector3.up * camHeight;
                 camNewRotation = new Vector3(90,0,0);
                 break;
            
